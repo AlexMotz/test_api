@@ -26,7 +26,7 @@ app.post('/v1/test/route', routes.test.test_route_post);
 app.get('/ack', routes.test.ack_get);
 app.post('/ack', routes.test.ack_post);
 
-app.get('/point/:distance/:theta/:phi', routes.test.Ω);
+app.get('/point/:distance/:theta/:phi', routes.test.point_get);
 
 app.get('/robots.txt', function (req, res, next) {
   res.set('Content-Type', 'text/plain');

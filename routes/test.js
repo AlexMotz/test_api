@@ -4,8 +4,10 @@ exports.test_route = function(req, res, next) {
 }
 
 exports.test_route_post = function(req, res, next) {
+	var time = Math.floor(Date.now())
+	console.log("[POST] - test_route_post | Time: [" + time + "] | " + req.body);
 	console.log(req);
-	res.sendStatus(200);
+	// res.sendStatus(200);
 }
 
 
@@ -13,12 +15,12 @@ exports.test_route_post = function(req, res, next) {
 
 exports.ack_get = function(req, res, next) {
 	console.log("[GET] - ack_get");
-	res.send(req);
+	res.send(req.body);
 }
 
 exports.ack_post = function(req, res, next) {
 	console.log("[POST] - ack_post");
-	res.send(req);
+	res.send(req.body);
 }
 
 
